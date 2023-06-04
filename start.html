@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ChatBot</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR41Fkqg3c37MAQJPPJntb-ZFYqrzaEDmqCXh2hI7Q-dewIpmmN6TwLW1xiF_Eik-jKNOg&usqp=CAU" type="image/icon type">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ url_for('static', path='/css/a2z.css') }}" rel="stylesheet">  
+  
+  </head>
+
+<body>
+  
+      <div class="fabs">
+        <div class="chat">
+            <!--chat header start-->
+          <div class="chat_header">
+            <div class="chat_option">
+            <div class="header_img">
+              <img src="https://static.vecteezy.com/system/resources/previews/019/786/706/original/chatbot-icon-cute-smiling-robot-cartoon-character-illustration-png.png"/>
+              </div>
+              <span id="chat_head">User</span> <br> <span class="agent">Agent</span> <span class="online">(Online)</span>
+             <span id="chat_fullscreen_loader" class="chat_fullscreen_loader"><i class="fullscreen zmdi zmdi-window-maximize"></i></span>
+            </div>
+          </div>
+          <!--chat header end-->
+      
+          <!--chat body start-->
+          <!--chatbot start-->
+          <div class="chat_body chat_login">
+              <a id="chat_first_screen" class="fab"><i class="zmdi zmdi-arrow-right"></i></a>
+              <p>Start A2Z_Bot chatbot</p>
+          </div>
+          <!--conversation-->
+          <div id="chat_converse" class="chat_conversion chat_converse">
+      
+      
+            <span class="chat_msg_item chat_msg_item_admin">
+                  <div class="chat_avatar">
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR41Fkqg3c37MAQJPPJntb-ZFYqrzaEDmqCXh2hI7Q-dewIpmmN6TwLW1xiF_Eik-jKNOg&usqp=CAU"/>
+                  </div>Hello Friend!!!
+      
+          
+      
+          </div>
+              <!-- End conversation-->
+      
+        
+       <!--text input and submit button-->
+          <div class="fab_field">
+            <a id="fab_camera" class="fab"><i class="zmdi zmdi-camera"></i></a>
+            <a id="fab_send" class="fab"><i class="zmdi zmdi-mail-send"></i></a>
+            <textarea id="chatSend" name="chat_message" placeholder="Send a message" class="chat_field chat_message"></textarea>
+          </div>
+        </div>
+          <a id="prime" class="fab"><i class="prime zmdi zmdi-comment-outline"></i></a>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          $.ajax({
+            url: "/static/js/a2z.js", // تعديل الـ URL إذا كانت مسار الملف مختلفًا
+            dataType: "script",
+            success: function(data) {
+              // تم تحميل الملف بنجاح، يمكنك استخدامه هنا
+              console.log("تم تحميل ملف a2z.js");
+            },
+            error: function() {
+              console.error("فشل تحميل ملف a2z.js");
+            }
+          });
+        });
+      </script>
+      </body>
+      </html>
